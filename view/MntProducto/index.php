@@ -687,14 +687,38 @@
         </nav>
       </div><!-- br-pageheader -->
       <div class="pd-x-20 pd-sm-x-30 pd-t-20 pd-sm-t-30">
-        <h4 class="tx-gray-800 mg-b-5">Página de Productod</h4>
+        <h4 class="tx-gray-800 mg-b-5">Página de Productos</h4>
         <p class="mg-b-0">Aqui voy a configurar mi pagina de productos</p>
       </div>
 
       <div class="br-pagebody">
 
-        <!-- start you own content here -->
+        <div class="br-section-wrapper">
+          <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">Mantenimiento de Productos</h6>
+          <!-- <p class="mg-b-25 mg-lg-b-50">Searching, ordering and paging goodness will be immediately added to the table, as shown in this example.</p> -->
 
+          <div class="table-wrapper">
+            <table id="datatable1" class="table display responsive nowrap">
+              <thead>
+                <tr>
+                  <th class="wd-15p">Nombre Producto</th>
+                  <th class="wd-15p">Acción</th>
+                  <th class="wd-20p">Acción</th>
+                 
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Coca Cola 2L</td>
+                  <td><button type="button" class="btn btn-outline-primary btn-icon"><div class="fa fa-edit"></div></button> </td>
+                  <td><button type="button" class="btn btn-outline-danger btn-icon"><div class="fa fa-trash"></div></button> </td>
+                 
+                </tr>
+               
+               </tbody>
+            </table>
+          </div><!-- table-wrapper -->
+        </div>
       </div><!-- br-pagebody -->
 
     </div><!-- br-mainpanel -->
