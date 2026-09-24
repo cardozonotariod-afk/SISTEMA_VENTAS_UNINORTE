@@ -1,37 +1,36 @@
 <?php
 
-    require_once(../config/conexion.php);
-    require_once(../model/Productos.php);
+require_once("../config/conexion.php");
+require_once("../model/Productos.php");
 
-    $producto = new Productos();
+$producto = new Producto();
 
-    switch($_GET("op")){
+switch ($_GET["op"]) {
 
-        case "listar":
-            $datos = $producto->get_producto();
+    case "listar":
+        $datos = $producto->get_producto();
 
-            $data = Array();
+        $data = Array();
 
-            foreach($datos as $row){
-                $sub_array[] = $row["prod_nom"];
-                $sub_array[] = $row["prod_id"];
-                $sub_array[] = $row["prod_id"];
+        foreach($datos as $row){
+            $sub_array = array();
 
-                $data[] = $sub_array;
-            }
+            $sub_array[] = $row["prod_nom"];
+            $sub_array[] = '<button type="button" onClick="editar('.$row["prod_id"].');" id="'.$row["prod_id"].'" class="btn btn-outline-primary btn-icon"><div class="fa fa-edit"></div></button>';
+            $sub_array[] = '<button type="button" onClick="eliminar('.$row["prod_id"].');" id="'.$row["prod_id"].'" class="btn btn-outline-danger btn-icon"><div class="fa fa-trash"></div></button>';
 
-            $results = array(
-                "sEcho" => 1,
-                "iTotalRecords" => count($data),
-                "iTotalDisplayRecords" => count($data);
-                "aaData" => $data;
+            $data[] = $sub_array;
+        }
 
-            )
+        $results = array(
+            "sEcho" => 1,
+            "iTotalRecords" => count($data),
+            "iTotalDisplayRecords" => count($data),
+            "aaData" => $data
+        );
 
-            echo json_encode($results);
+        echo json_encode($results);
 
         break;
-
-    }
-
+}
 ?>

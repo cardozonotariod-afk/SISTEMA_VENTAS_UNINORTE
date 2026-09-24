@@ -35,6 +35,7 @@
     <link href="../../public/lib/Ionicons/css/ionicons.css" rel="stylesheet">
     <link href="../../public/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <link href="../../public/lib/jquery-switchbutton/jquery.switchButton.css" rel="stylesheet">
+    <link href="../../public/lib/datatables/jquery.dataTables.css" rel="stylesheet">
 
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="../../public/css/bracket.css">
@@ -698,7 +699,7 @@
           <!-- <p class="mg-b-25 mg-lg-b-50">Searching, ordering and paging goodness will be immediately added to the table, as shown in this example.</p> -->
 
           <div class="table-wrapper">
-            <table id="datatable1" class="table display responsive nowrap">
+            <table id="producto_data" class="table display responsive nowrap">
               <thead>
                 <tr>
                   <th class="wd-15p">Nombre Producto</th>
@@ -708,7 +709,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <!-- <td>Coca Cola 2L</td>
+                  <td>Coca Cola 2L</td>
                   <td><button type="button" class="btn btn-outline-primary btn-icon"><div class="fa fa-edit"></div></button> </td>
                   <td><button type="button" class="btn btn-outline-danger btn-icon"><div class="fa fa-trash"></div></button> </td>
                 </tr>
@@ -716,7 +717,7 @@
                   <td>Agua de 2l</td>
                   <td><button type="button" class="btn btn-outline-primary btn-icon"><div class="fa fa-edit"></div></button> </td>
                   <td><button type="button" class="btn btn-outline-danger btn-icon"><div class="fa fa-trash"></div></button> </td>
-                </tr> -->
+                </tr>
                </tbody>
             </table>
           </div><!-- table-wrapper -->
@@ -735,6 +736,35 @@
     <script src="../../public/lib/jquery-switchbutton/jquery.switchButton.js"></script>
     <script src="../../public/lib/peity/jquery.peity.js"></script>
 
+    <script src="../../public/lib/datatables/jquery.dataTables.js"></script>
+    <script src="../../public/lib/datatables-responsive/dataTables.responsive.js"></script>
+
     <script src="../../public/js/bracket.js"></script>
+    <script src="mntproducto.js"></script>
+
+     <!-- <script>
+      $(function(){
+        'use strict';
+
+        $('#producto_data').DataTable({
+          responsive: true,
+          language: {
+            searchPlaceholder: 'Search...',
+            sSearch: '',
+            lengthMenu: '_MENU_ items/page',
+          }
+        });
+
+        $('#datatable2').DataTable({
+          bLengthChange: false,
+          searching: false,
+          responsive: true
+        });
+
+        // Select2
+        $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
+
+      });
+    </script> -->
   </body>
 </html>
