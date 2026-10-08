@@ -1,12 +1,12 @@
-// function init(){
+function init(){
 
-// }
+}
 
 $(document).ready(function(){
 
     tabla = $('#producto_data').dataTable({
 
-        "aProcessing": true, // Activamos el procesamiento de datatables
+        "aProcessing": true, // Activamos el procesamiento de datatables (en "true" muestra por ej: cargando datos)
         "aServerSide": true, // Paginación y filtrado realizados por el servidor
         dom: 'Bfrtip', // Definimos los elementos del control de tabla
 
@@ -18,7 +18,7 @@ $(document).ready(function(){
         ],
 
         "ajax": {
-            url: '../../controller/productos.php?op=listar',
+            url: '../../controller/producto.php?op=listar',
             type: "get",
             dataType: "json",
             error: function(e){
@@ -61,5 +61,17 @@ $(document).ready(function(){
     }).DataTable();
 
 });
+
+$(document).on("click", "#btnNuevo", function(){
+    // alert("EVENTO DETECTADO")
+    $("#modalmantenimiento").modal("show");
+})
+
+function eliminar(prod_id){
+    // alert("Función eliminar id: " + prod_id)
+    $.post("../../controller/producto.php?op=eliminar", {prod_id:prod_id}, function(data){
+
+    })
+}
 
 init();

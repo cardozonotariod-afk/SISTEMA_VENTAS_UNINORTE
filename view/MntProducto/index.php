@@ -35,7 +35,7 @@
     <link href="../../public/lib/Ionicons/css/ionicons.css" rel="stylesheet">
     <link href="../../public/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <link href="../../public/lib/jquery-switchbutton/jquery.switchButton.css" rel="stylesheet">
-    <link href="../../public/lib/datatables/jquery.dataTables.css" rel="stylesheet">
+    <link href="../../public/lib/datatables/jquery.dataTables.css" rel="stylesheet">  
 
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="../../public/css/bracket.css">
@@ -45,36 +45,38 @@
 
     <!-- ########## START: LEFT PANEL ########## -->
     <div class="br-logo"><a href=""><span>[</span>Ventas<span>]</span></a></div>
-
     <div class="br-sideleft overflow-y-auto">
       <label class="sidebar-label pd-x-15 mg-t-20">Navegación</label>
       <div class="br-sideleft-menu">
-
+        
         <a href="../../index.php" class="br-menu-link">
           <div class="br-menu-item">
             <i class="menu-item-icon icon ion-ios-home-outline tx-22"></i>
             <span class="menu-item-label">Dashboard</span>
           </div><!-- menu-item -->
         </a><!-- br-menu-link -->
-   
+        
+      
         <a href="#" class="br-menu-link">
           <div class="br-menu-item">
             <i class="menu-item-icon icon ion-ios-filing-outline tx-24"></i>
-            <span class="menu-item-label">Mantenimientos</span>
+            <span class="menu-item-label">Mantenimiento</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
           </div><!-- menu-item -->
-        </a><!-- br-menu-link -->
-
+        </a>
+        
+        <!-- br-menu-link -->
         <ul class="br-menu-sub nav flex-column">
-          <li class="nav-item">
-            <a href="#" class="nav-link">Productos</a>
-          </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Productos</a>
+            </li>
         </ul>
-      </div>
 
-      <label class="sidebar-label pd-x-15 mg-t-25 mg-b-20 tx-info op-9">Sistema Ventas UniNorte</label>
+    </div>
 
-      <div class="info-list">
+  <label class="sidebar-label pd-x-15 mg-t-25 mg-b-20 tx-info op-9">Sistema de Ventas - UniNorte</label>
+
+    <div class="info-list">
         <div class="d-flex align-items-center justify-content-between pd-x-15">
           <div>
             <p class="tx-10 tx-roboto tx-uppercase tx-spacing-1 tx-white op-3 mg-b-2 space-nowrap">Memory Usage</p>
@@ -683,49 +685,59 @@
     <div class="br-mainpanel">
       <div class="br-pageheader pd-y-15 pd-l-20">
         <nav class="breadcrumb pd-0 mg-0 tx-12">
-          <a class="breadcrumb-item" href="index.html">Sistema Ventas</a>
+          <a class="breadcrumb-item" href="index.html">Sistema de Ventas</a>
           <span class="breadcrumb-item active">Productos</span>
         </nav>
       </div><!-- br-pageheader -->
+      
       <div class="pd-x-20 pd-sm-x-30 pd-t-20 pd-sm-t-30">
-        <h4 class="tx-gray-800 mg-b-5">Página de Productos</h4>
-        <p class="mg-b-0">Aqui voy a configurar mi pagina de productos</p>
+            <h4 class="tx-gray-800 mg-b-5">Página de Productos</h4>
+            <p class="mg-b-0">Aquí voy a configurar mi página de productos</p>
       </div>
 
-      <div class="br-pagebody">
+     <div class="br-pagebody">
 
+        
+      <div class="br-pagebody">
+        
         <div class="br-section-wrapper">
           <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">Mantenimiento de Productos</h6>
-          <!-- <p class="mg-b-25 mg-lg-b-50">Searching, ordering and paging goodness will be immediately added to the table, as shown in this example.</p> -->
+
+              <button id="btnNuevo" class="btn btn-indigo disabled btn-block mg-b-10">Nuevo Registro</button>
+            
 
           <div class="table-wrapper">
             <table id="producto_data" class="table display responsive nowrap">
               <thead>
                 <tr>
-                  <th class="wd-15p">Nombre Producto</th>
+                  <th class="wd-15p">Nombre del Producto</th>
                   <th class="wd-15p">Acción</th>
-                  <th class="wd-20p">Acción</th> 
+                  <th class="wd-20p">Acción</th>
                 </tr>
               </thead>
+              
               <tbody>
                 <tr>
-                  <td>Coca Cola 2L</td>
-                  <td><button type="button" class="btn btn-outline-primary btn-icon"><div class="fa fa-edit"></div></button> </td>
-                  <td><button type="button" class="btn btn-outline-danger btn-icon"><div class="fa fa-trash"></div></button> </td>
+                  <td>Gaseosa Pulp Pomelo 1L</td>
+                  <td><button type="button" class="btn btn-outline-primary btn-icon"> <div class="fa fa-edit"></div> </button></td>
+                  <td><button type="button" class="btn btn-outline-danger btn-icon"> <div class="fa fa-trash"></div> </button></td>
                 </tr>
                 <tr>
-                  <td>Agua de 2l</td>
-                  <td><button type="button" class="btn btn-outline-primary btn-icon"><div class="fa fa-edit"></div></button> </td>
-                  <td><button type="button" class="btn btn-outline-danger btn-icon"><div class="fa fa-trash"></div></button> </td>
+                  <td>Agua en botella 1.5L</td>
+                  <td><button type="button" class="btn btn-outline-primary btn-icon"> <div class="fa fa-edit"></div> </button></td>
+                  <td><button type="button" class="btn btn-outline-danger btn-icon"> <div class="fa fa-trash"></div> </button></td>
                 </tr>
-               </tbody>
+              </tbody>
+
             </table>
           </div><!-- table-wrapper -->
-        </div>
-      </div><!-- br-pagebody -->
+        </div><!-- br-pagebody -->
+      </div>
 
     </div><!-- br-mainpanel -->
     <!-- ########## END: MAIN PANEL ########## -->
+
+    <?php require_once ("modalmantenimiento.php"); ?>
 
     <script src="../../public/lib/jquery/jquery.js"></script>
     <script src="../../public/lib/popper.js/popper.js"></script>
