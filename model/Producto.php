@@ -4,7 +4,7 @@
 class Producto extends Conectar
 {
     // Obtiene todos los productos de la base de datos
-    public function get_producto()
+    public function get_product()
     {
         // Establece la conexión con la base de datos
         $conectar = parent::conexion();
@@ -55,7 +55,7 @@ class Producto extends Conectar
     }
 
     // Elimina un producto según su ID
-    public function delete_producto($prod_id)
+    public function delete_product($prod_id)
     {
         // Establece la conexión con la base de datos
         $conectar = parent::conexion();
@@ -88,7 +88,7 @@ class Producto extends Conectar
 
 
     // Inserta un nuevo producto
-    public function insert_producto($prod_nom)
+    public function insert_product($prod_nom)
     {
         // Establece la conexión con la base de datos
         $conectar = parent::conexion();
@@ -116,21 +116,20 @@ class Producto extends Conectar
         return $resultado;
     }
 
-    public function update_producto($prod_id, $prod_nom){
-        $conectar=parent::conexion();
+    public function update_product($prod_id, $prod_nom)
+    {
+        $conectar = parent::conexion();
         parent::set_names();
-        $sql="UPDATE tb_producto
+        $sql = "UPDATE tb_producto
             SET
                 prod_nom=?,
                 fech_modi=now()
             WHERE
                 prod_id = ?;";
-        $sql=$conectar->prepare($sql);
-        $sql->bindValue(1,$prod_nom);
+        $sql = $conectar->prepare($sql);
+        $sql->bindValue(1, $prod_nom);
         $sql->bindValue(2, $prod_id);
         $sql->execute();
-        return $resultado=$sql->fetchAll();
+        return $resultado = $sql->fetchAll();
     }
 }
-
-?>

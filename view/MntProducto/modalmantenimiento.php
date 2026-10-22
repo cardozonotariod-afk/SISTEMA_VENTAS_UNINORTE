@@ -9,16 +9,17 @@
                 </button>
             </div>
 
-            <form action="" method="post">
+            <form action="" method="post" id="producto_form">
                 <div class="modal-body pd-25">
+                    <input type="hidden" id="prod_id" name="prod_id">
                     <div class="form-group d-flex align-items-center">
                         <label class="form-control-label me-2" for="">Nombre del Producto</label>
-                        <input type="text" class="form-control me-2" name="prod_nom" placeholder="Ingrese Nombre del Producto">
+                        <input type="text" class="form-control me-2" name="prod_nom" placeholder="Ingrese Nombre del Producto" required>
                     </div>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium">Guardar</button>
+                    <button type="submit" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium">Guardar</button>
                     <button type="button" class="btn btn-secondary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium" data-dismiss="modal">Cancelar</button>
                 </div>
             </form>
